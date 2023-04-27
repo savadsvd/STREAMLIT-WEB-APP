@@ -7,7 +7,7 @@ st.title("Plant Disease Classification")
 upload_file=st.file_uploader("Upload the plant leafe",type=['jpg','png'])
 generate_pred=st.button("predict")
 model=tf.keras.models.load_model("/content/drive/MyDrive/new/plant.h5")
-if import_n_predict(image_data,model):
+def import_n_predict(image_data,model):
   size=(224,224)
   image=ImageOps.fit(image_data,size,Image.ANTIALIAS)
   image=np.asarray(image)
