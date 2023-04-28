@@ -6,7 +6,7 @@ from PIL import Image,ImageOps
 st.title("Plant Disease Classification")
 upload_file=st.file_uploader("Upload the plant leafe",type=['jpg','png'])
 generate_pred=st.button("predict")
-model=tf.keras.models.load_model("plant.h5")
+model=tf.keras.models.load_model("https://github.com/savadsvd/plant_app/blob/master/plant.h5")
 def import_n_predict(image_data,model):
   size=(224,224)
   image=ImageOps.fit(image_data,size,Image.ANTIALIAS)
